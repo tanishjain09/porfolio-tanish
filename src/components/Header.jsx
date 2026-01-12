@@ -1,7 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { assets } from "../assets/assets";
-import { ArrowRight, Download, Github, Linkedin, Instagram } from "lucide-react";
+import {
+  ArrowRight,
+  Download,
+  Github,
+  Linkedin,
+  Instagram,
+} from "lucide-react";
 
 export function Header() {
   return (
@@ -9,7 +15,6 @@ export function Header() {
       id="top"
       className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20"
     >
-
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -29,27 +34,39 @@ export function Header() {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-center max-w-2xl"
+        className="text-center max-w-xl space-y-5"
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white">
           Hi, I'm{" "}
           <span className="bg-gradient-to-r from-blue-600 via-purple-500 to-amber-500 bg-clip-text text-transparent animate-gradient-x bg-[length:200%_auto]">
             Tanish Sethiya
           </span>
         </h1>
-
-        <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-6 leading-relaxed">
-          Passionate software developer with expertise in Java, Python, and modern
-          web technologies like React and Next.js. I love building scalable,
-          user-friendly applications and solving challenging problems through
-          clean, efficient code.
+        <p className="text-base md:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">
+          Building practical software with a focus on performance, clarity, and
+          scalability.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-2 text-sm font-medium text-neutral-500 dark:text-neutral-400 mb-8">
-          <span className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-full">Java</span>
-          <span className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-full">React</span>
-          <span className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-full">DSA</span>
-          <span className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-full">Spring</span>
+        <p className="text-sm md:text-base text-neutral-500 dark:text-neutral-400 leading-relaxed">
+          Passionate software developer with a strong foundation in Java, Data
+          Structures, and full-stack development. I enjoy building real-world
+          projects, writing clean code, and continuously improving my
+          problem-solving skills.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-2 pt-2 text-xs md:text-sm font-medium text-neutral-500 dark:text-neutral-400">
+          <span className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-full">
+            Java
+          </span>
+          <span className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-full">
+            React
+          </span>
+          <span className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-full">
+            DSA
+          </span>
+          <span className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-full">
+            Spring Boot
+          </span>
         </div>
 
         <div className="flex justify-center gap-4 mb-10">
@@ -95,7 +112,7 @@ export function Header() {
           </motion.a>
 
           <motion.a
-            href="/sample-resume.pdf"
+            href="/resumeTanishJan.pdf"
             download
             whileHover={{ scale: 1.05, translateY: -2 }}
             whileTap={{ scale: 0.95 }}

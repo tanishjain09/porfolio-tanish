@@ -5,7 +5,7 @@ import { assets } from "../assets/assets";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/about", label: "About Me" },
   { href: "/skills", label: "Skills" },
   { href: "/projects", label: "Projects" },
   { href: "/contact", label: "Contact" },
@@ -59,7 +59,6 @@ export function Navbar({ isDarkMode, setIsDarkMode }) {
         />
 
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-          {/* Logo */}
           <Link to="/" className="text-xl font-bold text-neutral-900 dark:text-white">
            <span className="font-satoshi text-xl font-bold">
   Tanish <span className="text-neutral-400 font-medium">Jain</span>
