@@ -112,8 +112,8 @@ export function Header() {
           </motion.a>
 
           <motion.a
-            href="/resumeTanishJan.pdf"
-            download
+            href="/resumeJan.pdf"
+            download="resumeJan.pdf"
             whileHover={{ scale: 1.05, translateY: -2 }}
             whileTap={{ scale: 0.95 }}
             className="group inline-flex items-center gap-2 px-8 py-3 bg-white dark:bg-transparent text-neutral-900 dark:text-white font-medium rounded-full border border-neutral-300 dark:border-neutral-600 hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all shadow-sm hover:shadow-md"
