@@ -55,7 +55,7 @@ export function Project({ isHomePage: propIsHomePage }) {
           >
             {isHomePage
               ? "A selection of my best work across various technologies and domains."
-              : "A comprehensive collection of projects that showcase my skills in full-stack development and building user-centric applications."}
+              : "A comprehensive collection of projects that showcase my skills."}
           </motion.p>
         </div>
 
