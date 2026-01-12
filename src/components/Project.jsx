@@ -1,18 +1,15 @@
+import React from "react";
 import { motion } from "framer-motion";
-import { Link, useLocation } from "react-router-dom"; 
-import { ArrowRight } from "lucide-react";
 import { projectsData } from "../assets/assets";
-import { ProjectCard } from "./cards/ProjectCard";
+import ProjectCard from "./cards/ProjectCard"; 
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
-export function Project({ isHomePage: propIsHomePage }) {
-  const location = useLocation();
-
-  const isHomePage = propIsHomePage !== undefined 
-    ? propIsHomePage 
-    : location.pathname !== "/projects";
-
-  const displayedProjects = isHomePage
-    ? projectsData.filter((p) => p.featured).slice(0, 3)
+export function Project({ isHomePage = false }) {
+  // Logic: Removed the .filter(p => p.featured) check.
+  // Now it just shows the first 3 projects on the Home page, and all projects on the Projects page.
+  const displayedProjects = isHomePage 
+    ? projectsData.slice(0, 3) 
     : projectsData;
 
   return (
@@ -37,15 +34,17 @@ export function Project({ isHomePage: propIsHomePage }) {
           >
             Portfolio
           </motion.span>
+          
           <motion.h2
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4"
+            className="text-3xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-4"
           >
-            {isHomePage ? "Featured Projects" : "All Projects"}
+            {isHomePage ? "Recent Projects" : "All Projects"}
           </motion.h2>
+
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -54,22 +53,25 @@ export function Project({ isHomePage: propIsHomePage }) {
             className="max-w-2xl mx-auto text-neutral-600 dark:text-neutral-400"
           >
             {isHomePage
-              ? "A selection of my best work across various technologies and domains."
-              : "A comprehensive collection of projects that showcase my skills."}
+              ? "A selection of my recent work across various technologies and domains."
+              : "A comprehensive collection of projects that showcase my skills in full-stack development."}
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* --- PROJECT GRID --- */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedProjects.map((project, index) => (
             <ProjectCard key={project.id || index} project={project} index={index} />
           ))}
         </div>
+
+        {/* --- BUTTON SECTION --- */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mt-12"
+          className="text-center mt-16"
         >
           {isHomePage ? (
             <Link
@@ -85,9 +87,9 @@ export function Project({ isHomePage: propIsHomePage }) {
               href="https://github.com/tanishjain09"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 border border-neutral-300 dark:border-neutral-600 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200"
+              className="inline-flex items-center gap-2 px-8 py-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 border border-neutral-300 dark:border-neutral-600 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all duration-200"
             >
-              Follow on GitHub
+              View More on GitHub
               <ArrowRight className="w-4 h-4" />
             </a>
           )}
