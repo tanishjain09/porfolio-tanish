@@ -211,9 +211,9 @@ export const skillsData = [
   {
     category: "Databases",
     skills: [
-      { name: "MongoDB", icon: "mongodb", level: 75, experience: "Learning" },
+      { name: "MongoDB", icon: "mongodb", level: 10, experience: "Learning" },
       // { name: "PostgreSQL", icon: "Database", level: 80, experience: "2+ Years" },
-      { name: "MySQL", icon: "mysql", level: 80, experience: "1+ Years" },
+      { name: "MySQL", icon: "mysql", level: 70, experience: "1+ Years" },
       // { name: "Redis", icon: "Zap", level: 70, experience: "1+ Year" },
     ],
   },
