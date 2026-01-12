@@ -99,7 +99,7 @@ export function About({ isDarkMode }) {
             </p>
 
             <Link
-              to="/skills"
+              to="/projects"
               className="group relative inline-flex items-center gap-2 px-10 py-4 mt-10
   bg-neutral-900 dark:bg-white text-white dark:text-neutral-900
   rounded-full font-bold overflow-hidden transition-all
