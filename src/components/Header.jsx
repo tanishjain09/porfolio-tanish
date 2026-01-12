@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { assets } from "../assets/assets";
-// Import icons specifically for React
 import { ArrowRight, Download, Github, Linkedin, Instagram } from "lucide-react";
 
 export function Header() {
@@ -46,7 +45,6 @@ export function Header() {
           clean, efficient code.
         </p>
 
-        {/* Tech Badges */}
         <div className="flex flex-wrap justify-center gap-2 text-sm font-medium text-neutral-500 dark:text-neutral-400 mb-8">
           <span className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-full">Java</span>
           <span className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-full">React</span>
@@ -54,7 +52,6 @@ export function Header() {
           <span className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-full">Spring</span>
         </div>
 
-        {/* Social Links */}
         <div className="flex justify-center gap-4 mb-10">
           <motion.a
             href="https://github.com/tanishjain09"
@@ -85,7 +82,6 @@ export function Header() {
           </motion.a>
         </div>
 
-        {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <motion.a
             href="#contact"

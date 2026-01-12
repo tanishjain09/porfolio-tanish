@@ -1,7 +1,6 @@
 import { useRef, useState, useCallback } from "react";
 import clsx from "clsx";
 
-// Changed "export default" to "export const" to match your Skills.jsx import
 export const SpotlightCard = ({
   children,
   spotlightColor = "rgba(59, 130, 246, 0.25)",

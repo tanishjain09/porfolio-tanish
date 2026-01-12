@@ -1,6 +1,5 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { Link, useLocation } from "react-router-dom"; // Added useLocation
+import { Link, useLocation } from "react-router-dom"; 
 import { ArrowRight } from "lucide-react";
 import { projectsData } from "../assets/assets";
 import { ProjectCard } from "./cards/ProjectCard";
@@ -8,18 +7,10 @@ import { ProjectCard } from "./cards/ProjectCard";
 export function Project({ isHomePage: propIsHomePage }) {
   const location = useLocation();
 
-  /**
-   * AUTOMATIC DETECTION:
-   * If the URL is exactly "/projects", we treat it as the full portfolio.
-   * Otherwise, if the prop is passed or it's the home page, we show featured.
-   */
   const isHomePage = propIsHomePage !== undefined 
     ? propIsHomePage 
     : location.pathname !== "/projects";
 
-  // Filter projects: 
-  // On Home: Only those with featured: true (limited to 3)
-  // On /projects: Show everything in the array
   const displayedProjects = isHomePage
     ? projectsData.filter((p) => p.featured).slice(0, 3)
     : projectsData;
@@ -73,8 +64,6 @@ export function Project({ isHomePage: propIsHomePage }) {
             <ProjectCard key={project.id || index} project={project} index={index} />
           ))}
         </div>
-
-        {/* Dynamic Button Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +72,6 @@ export function Project({ isHomePage: propIsHomePage }) {
           className="text-center mt-12"
         >
           {isHomePage ? (
-            /* Home Page Button */
             <Link
               to="/projects"
               className="group relative inline-flex items-center gap-2 px-10 py-4 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 rounded-full font-bold overflow-hidden transition-all shadow-xl hover:shadow-blue-500/20"
@@ -93,7 +81,6 @@ export function Project({ isHomePage: propIsHomePage }) {
               <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           ) : (
-            /* /projects Page Button */
             <a
               href="https://github.com/tanishjain09"
               target="_blank"

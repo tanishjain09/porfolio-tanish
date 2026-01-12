@@ -10,7 +10,6 @@ html, body {
   @apply bg-white dark:bg-[#0a0a0f] transition-colors duration-300;
 }
 
-/* Optional: Specifically target the scroll container if using a specific wrapper */
 #root {
   @apply bg-white dark:bg-[#0a0a0f] min-h-screen;
 }

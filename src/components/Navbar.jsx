@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom"; // Changed from next/navigation
+import { Link, useLocation } from "react-router-dom";
 import { Moon, Sun, Menu, X } from "lucide-react";
-import { assets } from "../assets/assets"; // Ensure this path is correct for your React setup
+import { assets } from "../assets/assets"; 
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -18,18 +18,14 @@ export function Navbar({ isDarkMode, setIsDarkMode }) {
   const lastScrollY = useRef(0);
   const mobileMenuRef = useRef(null);
   
-  // React Router hook to get current path
   const location = useLocation();
 
-  //Scroll Handling
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // 1. Solid background after 50px
       setIsScrolled(currentScrollY > 50);
 
-      // 2. Hide on scroll down, show on scroll up
       if (currentScrollY > lastScrollY.current && currentScrollY > 150) {
         setIsVisible(false);
       } else {
@@ -42,7 +38,6 @@ export function Navbar({ isDarkMode, setIsDarkMode }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  /* ─── Lock Scroll on Mobile Open ─── */
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
   }, [isMobileMenuOpen]);
@@ -58,7 +53,6 @@ export function Navbar({ isDarkMode, setIsDarkMode }) {
             : "bg-transparent py-5"
         }`}
       >
-        {/* Animated bottom line when scrolled */}
         <div 
           className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-blue-500 to-transparent transition-opacity duration-500" 
           style={{ opacity: isScrolled ? 0.3 : 0 }} 
@@ -90,7 +84,6 @@ export function Navbar({ isDarkMode, setIsDarkMode }) {
           </ul>
 
           <div className="flex items-center gap-4">
-            {/* Theme Toggle */}
             <button
               onClick={() => setIsDarkMode((prev) => !prev)}
               className="p-2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200"
@@ -103,7 +96,6 @@ export function Navbar({ isDarkMode, setIsDarkMode }) {
               )}
             </button>
 
-            {/* CTA Button */}
             <Link
               to="/contact"
               className="hidden md:inline-flex px-5 py-2 text-sm font-medium bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 rounded-full hover:scale-105 active:scale-95 transition-all duration-200"
@@ -111,7 +103,7 @@ export function Navbar({ isDarkMode, setIsDarkMode }) {
               Let's Talk
             </Link>
 
-            {/* Mobile Menu Toggle */}
+    
             <button
               onClick={() => setIsMobileMenuOpen(true)}
               className="md:hidden p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
@@ -123,10 +115,8 @@ export function Navbar({ isDarkMode, setIsDarkMode }) {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-[60] md:hidden">
-          {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
             onClick={() => setIsMobileMenuOpen(false)}

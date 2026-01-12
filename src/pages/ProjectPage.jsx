@@ -1,7 +1,7 @@
 import {Navbar} from "../components/Navbar";
 import {Project} from "../components/Project";
 import Footer from "../components/Footer";
-import { useTheme } from "../components/ThemeProvider"; // adjust path
+import { useTheme } from "../components/ThemeProvider"; 
 
 function ProjectsPage() {
   const { isDarkMode, setIsDarkMode } = useTheme();

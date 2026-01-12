@@ -1,7 +1,6 @@
 import { useRef, useState, useCallback } from "react";
 import clsx from "clsx";
 
-// Use a NAMED export here
 export function ServiceInfoCard({
   children,
   spotlightColor = "rgba(59, 130, 246, 0.25)",

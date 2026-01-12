@@ -1,20 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 
-// Pages
 import Home from "./Home";
 import SkillsPage from "./pages/SkillsPage";
 import ProjectsPage from "./pages/ProjectPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 
-// Component for the scroll fix
 import ScrollToTop from "./components/ScrollToTop"; 
 
 export default function App() {
-  // Metadata & Scripts Logic
   useEffect(() => {
-    document.title = "Tanish Jain | Full Stack Developer";
+    document.title = "Tanish Jain - Portfolio";
 
     const injectScripts = () => {
       const scriptConfigs = [
@@ -45,7 +42,6 @@ export default function App() {
 
   return (
     <div className="antialiased">
-      {/* Reset scroll position on every route change */}
       <ScrollToTop />
 
       <Routes>

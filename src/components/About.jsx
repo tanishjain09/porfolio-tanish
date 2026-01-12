@@ -1,6 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion"; // Note: changed from 'framer-motion' to standard 'framer-motion'
-import { assets } from "../assets/assets"; // Adjusted import path for standard React structure
+import { motion } from "framer-motion"; 
+import { assets } from "../assets/assets"; 
 import { Link } from "react-router-dom";
 import * as LucideIcons from "lucide-react";
 

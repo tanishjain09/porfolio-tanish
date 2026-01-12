@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion"; // Changed from motion/react for compatibility
+import { motion } from "framer-motion"; 
 import { Send, MapPin, Briefcase, Mail, Clock } from "lucide-react";
 
 export function Contact({ isFullPage = false }) {

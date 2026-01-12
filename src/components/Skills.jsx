@@ -6,7 +6,6 @@ import { SpotlightCard } from "./cards/SpotlightCard";
 import { Link } from "react-router-dom";
 
 export function Skills({ isDarkMode, isHomePage = true }) {
-  // Use the first two categories for home page, or all for the full page
   const displayedSkills = isHomePage ? skillsData.slice(0, 2) : skillsData;
 
   return (
@@ -59,10 +58,8 @@ export function Skills({ isDarkMode, isHomePage = true }) {
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 {categoryGroup.skills.map((skill, skillIndex) => {
                   
-                  // Check if the icon string exists as a key in assets object (e.g., assets.java)
                   const customIconSrc = assets[skill.icon];
                   
-                  // Fallback to Lucide logic if it's not a custom asset
                   const IconComponent = LucideIcons[skill.icon] || LucideIcons.Code2;
 
                   return (
