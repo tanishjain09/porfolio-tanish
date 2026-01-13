@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { projectsData } from "../assets/assets";
 import ProjectCard from "./cards/ProjectCard"; 
@@ -6,8 +5,6 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function Project({ isHomePage = false }) {
-  // Logic: Removed the .filter(p => p.featured) check.
-  // Now it just shows the first 3 projects on the Home page, and all projects on the Projects page.
   const displayedProjects = isHomePage 
     ? projectsData.slice(0, 3) 
     : projectsData;
@@ -53,19 +50,17 @@ export function Project({ isHomePage = false }) {
             className="max-w-2xl mx-auto text-neutral-600 dark:text-neutral-400"
           >
             {isHomePage
-              ? "A selection of my recent work across various technologies and domains."
+              ? "A selection of my work across various technologies."
               : "A comprehensive collection of projects that showcase my skills in full-stack development."}
           </motion.p>
         </div>
 
-        {/* --- PROJECT GRID --- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+\        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedProjects.map((project, index) => (
             <ProjectCard key={project.id || index} project={project} index={index} />
           ))}
         </div>
 
-        {/* --- BUTTON SECTION --- */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
