@@ -45,7 +45,7 @@ import flask from './flask.png';
 import springboot from './springboot.png';
 import github from './github.png';
 import oracle from './oracle.png';
-import aws_dark from './aws_dark.png'; 
+import aws_dark from './aws_dark.png';
 import aws_light from './aws_white.png';
 import mysql from './mysql.png';
 import instagram from './instagram.png';
@@ -62,68 +62,68 @@ import intellije from './intellije.png';
 import cn from './cn.png';
 
 export const assets = {
-    user_image,
-    code_icon,
-    code_icon_dark,
-    edu_icon,
-    edu_icon_dark,
-    project_icon,
-    project_icon_dark,
-    vscode,
-    firebase,
-    figma,
-    git,
-    mongodb,
-    right_arrow_white,
-    logo,
-    logo_dark,
-    mail_icon,
-    mail_icon_dark,
-    profile_img,
-    download_icon,
-    hand_icon,
-    header_bg_color,
-    moon_icon,
-    sun_icon,
-    arrow_icon,
-    arrow_icon_dark,
-    menu_black,
-    menu_white,
-    close_black,
-    close_white,
-    web_icon,
-    mobile_icon,
-    ui_icon,
-    graphics_icon,
-    right_arrow,
-    send_icon,
-    right_arrow_bold,
-    right_arrow_bold_dark,
-    java,
-    js,
-    python,
-    react,
-    expressjs_white,
-    expressjs_black,
-    flask,
-    springboot,
-    github,
-    oracle,
-    aws_light,
-    aws_dark,
-    mysql,
-    instagram,
-    linkedin_dark,
-    linkedin_light,
-    leetcode,
-    ts,
-    nodejs,
-    postgres,
-    redis,
-    docker,
-    cn,
-    postman,
-    intellije
+  user_image,
+  code_icon,
+  code_icon_dark,
+  edu_icon,
+  edu_icon_dark,
+  project_icon,
+  project_icon_dark,
+  vscode,
+  firebase,
+  figma,
+  git,
+  mongodb,
+  right_arrow_white,
+  logo,
+  logo_dark,
+  mail_icon,
+  mail_icon_dark,
+  profile_img,
+  download_icon,
+  hand_icon,
+  header_bg_color,
+  moon_icon,
+  sun_icon,
+  arrow_icon,
+  arrow_icon_dark,
+  menu_black,
+  menu_white,
+  close_black,
+  close_white,
+  web_icon,
+  mobile_icon,
+  ui_icon,
+  graphics_icon,
+  right_arrow,
+  send_icon,
+  right_arrow_bold,
+  right_arrow_bold_dark,
+  java,
+  js,
+  python,
+  react,
+  expressjs_white,
+  expressjs_black,
+  flask,
+  springboot,
+  github,
+  oracle,
+  aws_light,
+  aws_dark,
+  mysql,
+  instagram,
+  linkedin_dark,
+  linkedin_light,
+  leetcode,
+  ts,
+  nodejs,
+  postgres,
+  redis,
+  docker,
+  cn,
+  postman,
+  intellije
 };
 
 // =======================
@@ -143,23 +143,40 @@ export const socialIcon = {
 export const projectsData = [
   {
     id: "1",
+    title: "Smart Campus  Issue & Maintenance Platform",
+    description:
+      "A full-stack MERN application for reporting, tracking, and resolving campus maintenance issues. Features role-based dashboards (Student/Staff/Admin), real-time analytics with interactive charts, image uploads via Cloudinary, JWT authentication, and a premium dark-themed UI with glassmorphism effects.",
+    techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Cloudinary"],
+    liveUrl: "https://smart-campus-khaki.vercel.app/",
+    sourceUrl: "https://github.com/tanishjain09/Smart-Campus-",
+  },
+  {
+    id: "2",
+    title: "HeartAI - Heart Disease Predictor",
+    description:
+      "A full-stack ML-powered web app that predicts cardiovascular disease risk from clinical biomarkers. Features a React frontend with animated risk gauges and an ECG-themed UI, backed by a Flask REST API serving an XGBoost/Random Forest model trained with SMOTE, GridSearchCV, and 5-fold cross-validation targeting 90%+ accuracy.",
+    techStack: ["React", "Flask", "Scikit-Learn", "XGBoost", "TailwindCSS", "Docker"],
+    liveUrl: "https://heartai-group.vercel.app/",
+    sourceUrl: "https://github.com/tanishjain09/HeartAI_Heart_Disease_Pre",
+  },
+  {
+    id: "3",
     title: "Simple Todo",
     description:
       "Simple Flask-Based To-Do Web App - I built this project while studying Flask as part of my current semester to practice web development fundamentals. ",
     techStack: ["Html", "Bootstrap ", "Flask", "SQLite"],
     liveUrl: "https://todobytanishusingflask.onrender.com/",
     sourceUrl: "https://github.com/tanishjain09/todo-flask",
-    featured: false,
   },
   {
-    id: "2",
+    id: "4",
     title: "Extensible Invoice & Tax Engine ",
     description: " Java-based console application for generating customer invoices with an extensible tax engine based on country-specific rules",
     techStack: ["Core Java", "OOPS"],
     sourceUrl: "https://github.com/tanishjain09",
   },
   {
-    id: "3",
+    id: "5",
     title: "BankingManagement JDBC",
     description:
       "A console-based banking system implemented using Java and JDBC.",
@@ -168,24 +185,24 @@ export const projectsData = [
     featured: false,
   },
   {
-    id: "4",
+    id: "6",
     title: "Amazon Homepage Clone",
     description:
       "Clone Amazon Homepage UI while learing HTML, CSS",
-    techStack: ["HTML", "CSS", ],
-    liveUrl : "https://amazonhomepageclonebytanish.netlify.app/",
+    techStack: ["HTML", "CSS",],
+    liveUrl: "https://amazonhomepageclonebytanish.netlify.app/",
     sourceUrl: "https://github.com/tanishjain09/Amazon-homepage-clone-",
   },
-  
+
   {
-    id: "5",
+    id: "7",
     title: "Developing SaaS Backend....",
     description:
       "Developing...",
     techStack: [],
     sourceUrl: "https://github.com/tanishjain09",
   },
-  
+
 ];
 
 // =======================
@@ -200,12 +217,12 @@ export const skillsData = [
       { name: "TypeScript", icon: "ts", level: 30, experience: "<1 Year" },
       { name: "React", icon: "Atom", level: 60, experience: "<1 Year" },
       { name: "Python", icon: "python", level: 35, experience: "1+ Year" },
-      { name : "SpringBoot", icon : "springboot", level : 75, experience: "1< Year"},
-      { name : "Flask", icon : "flask", level : 30, experience : "1+ Year"},
-      { name : "Nodejs", icon : "nodejs", level : 10, experience : "Learning..."},
-      { name : "Expressjs", icon : "expressjs_white", level : 10, experience : "Learning..."},
+      { name: "SpringBoot", icon: "springboot", level: 75, experience: "1< Year" },
+      { name: "Flask", icon: "flask", level: 30, experience: "1+ Year" },
+      { name: "Nodejs", icon: "nodejs", level: 10, experience: "Learning..." },
+      { name: "Expressjs", icon: "expressjs_white", level: 10, experience: "Learning..." },
 
-      
+
     ],
   },
   {
@@ -229,21 +246,21 @@ export const skillsData = [
   {
     category: "Tools",
     skills: [
-      { name : "Intellije Idea(Community)", icon : "intellije", level : 85, experience : "2+ Years"},
+      { name: "Intellije Idea(Community)", icon: "intellije", level: 85, experience: "2+ Years" },
       { name: "Git", icon: "git", level: 75, experience: "2+ Years" },
       { name: "Postman", icon: "postman", level: 70, experience: "1< Years" },
       { name: "VS Code", icon: "vscode", level: 95, experience: "2+ Years" },
-      { name : "Git hub", icon : "github", level : 75, experience : ""}
+      { name: "Git hub", icon: "github", level: 75, experience: "" }
     ],
   },
   {
-    category : "Core Concepts",
-    skills : [
-      {name : "Data Structure & Algorithm", icon: "", level : 80},
-      {name : "OOPs", icon : "", level : 80, experience : ""},
-      {name : "DBMS", icon : "Database", level : 75, experience : ""},
-      {name : "Computer Networks", icon : "cn", level : 80, experience : ""},
-      {name : "Operating System", icon : "os", level : 35, experience : ""}
+    category: "Core Concepts",
+    skills: [
+      { name: "Data Structure & Algorithm", icon: "", level: 80 },
+      { name: "OOPs", icon: "", level: 80, experience: "" },
+      { name: "DBMS", icon: "Database", level: 75, experience: "" },
+      { name: "Computer Networks", icon: "cn", level: 80, experience: "" },
+      { name: "Operating System", icon: "os", level: 35, experience: "" }
     ]
   }
 ];
